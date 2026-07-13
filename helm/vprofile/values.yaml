@@ -1,11 +1,10 @@
 app:
-  image: vprocontainers/vprofileapp
-  tag: latest
+  image: 131912110267.dkr.ecr.us-east-1.amazonaws.com/vprofileappimg
+  tag: 7b2a432
   replicas: 1
   containerPort: 8080
   servicePort: 8080
   defaultUser: guest
-
 db:
   image: vprocontainers/vprofiledb
   tag: latest
@@ -15,7 +14,6 @@ db:
   storageClass: gp2
   storageSize: 3Gi
   defaultUser: root
-
 memcached:
   image: memcached
   tag: latest
@@ -23,7 +21,6 @@ memcached:
   containerPort: 11211
   servicePort: 11211
   defaultUser: cache
-
 rabbitmq:
   image: rabbitmq
   tag: latest
@@ -31,20 +28,16 @@ rabbitmq:
   containerPort: 5672
   servicePort: 5672
   defaultUser: guest
-
 initcontainers:
   image: busybox
   tag: latest
-
 ingress:
   enabled: true
   host: vprofile.example.com
   servicePort: 8080
-
 secrets:
   dbPassword: vprodbpass
   rmqPassword: guest
-
 dockerregistry:
   enabled: false
   server: https://index.docker.io/v1/
