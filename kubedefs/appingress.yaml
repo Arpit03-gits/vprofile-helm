@@ -7,8 +7,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
+<<<<<<< HEAD
   - host:
     http:
+=======
+  - host: http://k8s-default-vprofile-8288e4772a-1362856882.us-east-1.elb.amazonaws.com/
+    http: http://k8s-default-vprofile-8288e4772a-1362856882.us-east-1.elb.amazonaws.com/
+>>>>>>> 837274dd8b611a14dabd080a578346dbdad5a812
       paths:
       - path: /
         pathType: Prefix
