@@ -33,7 +33,7 @@ initcontainers:
   tag: latest
 ingress:
   enabled: true
-  host: http://k8s-default-vprofile-8288e4772a-1362856882.us-east-1.elb.amazonaws.com 
+  host: 
   servicePort: 8080
 secrets:
   dbPassword: vprodbpass
