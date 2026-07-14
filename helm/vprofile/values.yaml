@@ -1,6 +1,6 @@
 app:
   image: 131912110267.dkr.ecr.us-east-1.amazonaws.com/vprofileappimg
-  tag: 7b2a432
+  tag: d2f2663
   replicas: 1
   containerPort: 8080
   servicePort: 8080
@@ -33,7 +33,7 @@ initcontainers:
   tag: latest
 ingress:
   enabled: true
-  host: 
+  host:
   servicePort: 8080
 secrets:
   dbPassword: vprodbpass
